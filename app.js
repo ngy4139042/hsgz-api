@@ -6,7 +6,13 @@ import Post from "./models/Post.js";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 function asyncHandler(handler) {
