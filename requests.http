@@ -1,0 +1,32 @@
+GET http://localhost:3000/posts
+
+###
+
+GET http://localhost:3000/posts?sort=oldest&count=2
+
+###
+
+GET http://localhost:3000/posts/akjaears
+
+###
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "페페 더 프로그",
+  "content": "헤헷"
+}
+
+###
+
+PATCH http://localhost:3000/posts/666563237ae8d08e9518a88f
+Content-Type: application/json
+
+{
+  "content": "헤헹"
+}
+
+###
+
+DELETE http://localhost:3000/posts/666563237ae8d08e9518a88f
